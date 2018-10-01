@@ -416,7 +416,6 @@ int main() {
 			removeAresta(grafo, v1, v2);
 		}
 		else if(strcmp(c, "show") == 0){
-			imprimiMatriz(grafo);
 			imprimiGrafo(grafo);
 		}
 		else if(strcmp(c, "find") == 0){
@@ -425,21 +424,11 @@ int main() {
 			pilha = criaPilha();
 			grafoMenorCaminho = encontraMenorCaminho(grafoDijkstra, v1, v2, grafo, pilha); //comando que acha o menor caminho no grafo dijkstra
 			//Grafo Original sendo mostrado na tela
-			printf("\nMatriz de adjacência do grafo original: \n");
-			//imprimiMatriz(grafo);
 			printf("Grafo Original:\n");
 			imprimiGrafo(grafo);
 			//Grafo Menor Caminho sendo mostrado na tela
-			printf("Matriz de adjacência do menor caminho: \n");
-			//imprimiMatriz(grafoMenorCaminho);
 			printf("Grafo com o menor Caminho:\n");
 			imprimiGrafo(grafoMenorCaminho);
-			/*
-			printf("Matriz de adjacencia do Algoritmo de Dijkstra: \n");
-			imprimiMatriz(grafoDijkstra);
-			printf("Grafo com o Algoritmo de Dijkstra:\n");
-			imprimiGrafo(grafoDijkstra);
-			*/
 			printf("Info:\n");
 			printf("  - Nome de cada vértice percorrido, na sequência certa, indicando o caminho: ");
 			mostraPilha(pilha);
